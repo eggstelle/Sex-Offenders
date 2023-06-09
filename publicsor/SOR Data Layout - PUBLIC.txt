@@ -1,0 +1,136 @@
+Sex Offender Registry Public Data Layout 
+2014-10-17
+
+
+NOTE: Effective 2014-10-30 the AddressLine2 column in the 'Public Individual Information.txt' 
+      file will only contain NULL values.
+
+
+
+Address Information:
+
+Column Name			Data Type	Description
+SexRegistrationNumber		varchar (10)	Sex registration number
+AddressDate			date		Date of address
+VerifyDate			date		Date of address verification
+City				varchar(24)	City
+State				char(2)		State
+Zip				varchar(9)	Zip Code
+CountyName			varchar(12)	County Name
+
+
+
+Birth Date Information:
+
+Column Name			Data Type	Description
+SexRegistrationNumber		varchar(10)	Sex registration number
+BirthDate			date		Offender’s non-primary date of birth
+
+
+
+Individual Information:
+
+Column Name			Data Type	Description
+SexRegistrationNumber		varchar(10)	Sex registration number
+FullName			varchar(30)	Offender full name (last, first middle)
+Race				char(1)		Race code
+Sex				char(1)		Sex code
+Height				varchar(3)	Height – feet and inches
+Weight				varchar(3)	Weight – lbs.
+EyeColor			varchar(3)	Eye color code
+HairColor			varchar(3)	Hair color code
+DepartmentOfCorrectionNumber	varchar(7)	Department of correction number
+RegistrationType		varchar(4)	Registration type
+RegistrationTypeDescription	varchar(50)	Registration type description
+PendingSourceCode		varchar(2)	Pending source code description
+PendingSourceCodeDescription	varchar(40)	Pending source code description
+RegistrationDate		date		Registration date
+AddressDate			date		Address date
+VerifyDate			date		Address verification date
+AddressLine1			varchar(40)	Address line 1
+AddressLine2			varchar(40)	Address line 2
+City				varchar(24)	City
+State				char(2)		State
+Zip				varchar(9)	Zip
+CountyName			varchar(12)	County name
+PrimaryBirthDate		date		Offender’s primary date of birth
+
+
+
+Name Information:
+
+Column Name			Data Type	Description
+SexRegistrationNumber		varchar(10)	Sex registration number
+FullName			varchar(30)	Offender full name (last, first middle)
+
+
+
+NonResident Information:
+
+Column Name				Data Type	Description
+SexRegistrationNumber			varchar(10)	Sex registration number
+NonResidentInStateAddressLine1		varchar(40)	In-state address line 1
+NonResidentInStateAddressLine2		varchar(40)	In-state address line 2
+NonResidentInStateCity			varchar(24)	In-state city
+NonResidentInStateState			char(2)		In-state state
+NonResidentInStateZip			varchar(9)	In-state zip code
+NonResidentOutOfStateAddressLine1	varchar(40)	Out-of-state Address line 1
+NonResidentOutOfStateAddressLine2	varchar(40)	Out-of-state Address line 2
+NonResidentOutOfStateCity		varchar(24)	Out-of-state city
+NonResidentOutOfStateState		char(2)		Out-of-state state
+NonResidentOutOfStateZip		varchar(9)	Out-of-state zip code
+SchoolBusinessName			varchar(36)	School or business name
+
+
+
+Offense Information:
+
+Column Name			Data Type	Description
+SexRegistrationNumber		varchar(10)	Sex registration number
+RegistrationDate		date		Registration date
+ReleaseDate			date		Date released from prison
+ConvictionDate			date		Date of conviction
+NCGeneralStatute		varchar(20)	NC General Statute
+NCGeneralStatuteDescription	varchar(60)	NC General Statute description
+ConfinementSentence		varchar(10)	Length of confinement
+ProbationSentence		varchar(8)	Length of probation
+CountyName			varchar(12)	County name
+AOCCourtCountyIdentifier	char(3)		AOC court county identifier
+ConvictionCountyName		varchar(12)	County of conviction
+ConvictionState			char(2)		State code where conviction occurred
+OffenseQualifierDescription	varchar(20)	Offense qualifier description
+AggravatedOffenseDescription	varchar(33)	Aggravated offense description
+OffenseDate			date		Offense Date 
+VictimAge			varchar(3)	Victim Age description
+OffenseKey                      char(3)         Sequence number of offense for a SexRegistrationNumber
+
+
+ScarMarkTattoo Information:
+
+Column Name			Data Type	Description
+SexRegistrationNumber		varchar(10)	Sex registration 
+NCICScarMarkTattoo		varchar(10)	SMT code
+ScarMarkTattooText		varchar(40)	Text description
+ScarMarkTattooDescription	varchar(200)	SMT type description
+
+
+
+Violation Information:
+
+Column Name			Data Type	Description
+SexRegistrationNumber		varchar(10)	Sex registration number
+ViolationType			char(3)		Violation type – current
+ViolationDescription		varchar(50)	Violation type description - current
+
+
+
+Conviction Name Information:
+
+Column Name			Data Type	Description
+SexRegistrationNumber		varchar(10)	Sex registration number
+OffenseKey                      char(3)         Sequence number of offense for a SexRegistrationNumber
+FullName			varchar(30)	Offender full name (last, first middle)
+NameType                        char(1)         Type of name: (A)lias at time of conviction, (S)entencing name, (C)onviction name
+
+
+
