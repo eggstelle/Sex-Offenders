@@ -96,12 +96,17 @@ schools_feet<- st_buffer(schools_sf,dist = 304.8)
 
 #create and check map
 
+colors <- c("Offenders" = "blue", "Schools" = "red")
+
 map <- ggplot(chatham$geometry) +
   geom_sf() +
   geom_sf(data = schools_feet, color=alpha("red", 0.5)) +
-  geom_sf(data = schools_sf, color="red", size=1) +
-  geom_sf(data = offenders_sf, color = "blue", size = 1)
-
+  geom_sf(data = schools_sf, size = 1, aes(color="Schools")) +
+  geom_sf(data = offenders_sf, size = 1, aes(color = "Offenders")) +
+  labs(x = "Latitude",
+       y = "Longitude",
+       color = "Legend") +
+  scale_color_manual(values = colors) 
 map
 
 #check for sex offenders
